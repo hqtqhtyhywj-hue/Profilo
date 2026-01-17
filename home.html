@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم بروفايل | احترافية AWS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        dark: '#0f172a',
+                        accent: '#38bdf8'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap');
+        body { font-family: 'Tajawal', sans-serif; background-color: #0f172a; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .transition-all { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="text-gray-200 overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass shadow-2xl">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold gradient-text tracking-tighter">PROFILE PRO</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-reverse space-x-8 items-center">
+                <button onclick="showPage('home')" class="hover:text-accent transition-all">الرئيسية</button>
+                <button onclick="window.location.href='portfolios.html'" class="hover:text-accent transition-all">النماذج</button>
+                <button onclick="showPage('order')" class="hover:text-accent transition-all">طلب خدمة</button>
+                <button onclick="showPage('faq')" class="hover:text-accent transition-all">الأسئلة</button>
+                <button onclick="showPage('order')" class="bg-primary hover:bg-blue-700 px-6 py-2 rounded-full font-bold transition-all shadow-lg shadow-blue-500/20">ابدأ الآن</button>
+            </div>
+
+            <div class="md:hidden">
+                <button id="menuBtn" class="text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-gray-800 p-4 space-y-4 text-center">
+            <button onclick="showPage('home')" class="block w-full py-2">الرئيسية</button>
+            <button onclick="window.location.href='portfolios.html'" class="block w-full py-2">مشاهدة النماذج</button>
+            <button onclick="showPage('order')" class="block w-full py-2">طلب خدمة</button>
+            <button onclick="showPage('faq')" class="block w-full py-2">الأسئلة الشائعة</button>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        
+        <div id="homePage" class="page-section">
+            <section class="container mx-auto px-6 py-12 md:py-24 text-center">
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    بروفايلك الرقمي <br><span class="gradient-text">بأداء سحابي عالمي</span>
+                </h2>
+                <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                    نصمم لك هوية بصرية مبهرة ونستضيفها على بنية AWS التحتية لضمان سرعة تفتح في أقل من ثانية وأمان لا يُخترق.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <button onclick="showPage('order')" class="bg-primary text-white px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all shadow-xl">اطلب مشروعك</button>
+                    <button onclick="window.location.href='portfolios.html'" class="glass px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/5 transition-all">مشاهدة النماذج</button>
+                </div>
+            </section>
+
+            <section class="py-20 bg-dark/50 shadow-inner">
+                <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="glass p-8 rounded-3xl text-center hover:-translate-y-2 transition-all">
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-bolt text-3xl text-blue-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">سرعة خارقة</h4>
+                        <p class="text-gray-400">نستخدم CDN عالمية لضمان وصول بروفايلك لعملائك بأسرع وقت ممكن.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl text-center hover:-translate-y-2 transition-all border-blue-500/30">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-shield-halved text-3xl text-accent"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">أمان AWS</h4>
+                        <p class="text-gray-400">حماية ضد هجمات DDoS وتشفير SSL مجاني لكل العملاء.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl text-center hover:-translate-y-2 transition-all">
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-mobile-screen text-3xl text-purple-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">تصميم متجاوب</h4>
+                        <p class="text-gray-400">سيظهر بروفايلك بشكل مثالي على الهواتف، الأجهزة اللوحية، والحواسيب.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="orderPage" class="page-section hidden container mx-auto px-6 py-12">
+            <div class="max-w-5xl mx-auto glass p-8 md:p-12 rounded-3xl shadow-2xl">
+                <h2 class="text-3xl font-bold mb-8 text-center">بدء مشروع جديد</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <form id="orderForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">الاسم الكامل</label>
+                                <input type="text" id="name" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="أدخل اسمك" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">رقم الجوال</label>
+                                <input type="tel" id="phone" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-primary outline-none" placeholder="+967xxxxxxxx" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">تفاصيل إضافية عن موقعك</label>
+                            <textarea id="details" rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-primary outline-none resize-none" placeholder="اكتب هنا تخصصك، الألوان المفضلة، أو أي روابط تريد إضافتها..."></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">مدة الاستضافة</label>
+                            <select id="hostingPeriod" class="w-full bg-dark border border-white/10 rounded-xl p-3 outline-none cursor-pointer" onchange="calculatePrice()">
+                                <option value="3">3 أشهر (أساسي)</option>
+                                <option value="6">6 أشهر (توفير 5%)</option>
+                                <option value="12">12 شهر (توفير 10%)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-primary py-4 rounded-xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-500/30 transition-all">إرسال الطلب عبر واتساب</button>
+                    </form>
+
+                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10 flex flex-col justify-center">
+                        <h4 class="text-lg mb-4 text-gray-400">ملخص التكلفة التقديري</h4>
+                        <div class="text-5xl font-bold mb-2 text-accent" id="totalPrice">20 $</div>
+                        <p class="text-sm text-gray-500 mb-6">تشمل التصميم + الاستضافة السحابية</p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i> استضافة على سيرفرات AWS</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i> شهادة أمان SSL مجانية</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i> دعم فني لمدة عام</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="faqPage" class="page-section hidden container mx-auto px-6 py-12">
+            <h2 class="text-3xl font-bold mb-12 text-center">الأسئلة الشائعة</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <details class="glass p-6 rounded-2xl cursor-pointer group">
+                    <summary class="font-bold text-lg list-none flex justify-between items-center">
+                        لماذا نستخدم AWS للاستضافة؟
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-all"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-400 leading-relaxed">تعتبر AWS المعيار الذهبي في عالم السحاب، توفر استقراراً بنسبة 99.99% وسرعة فائقة بفضل مراكز بياناتها المنتشرة حول العالم.</p>
+                </details>
+                <details class="glass p-6 rounded-2xl cursor-pointer group">
+                    <summary class="font-bold text-lg list-none flex justify-between items-center">
+                        هل يمكنني تعديل معلوماتي لاحقاً؟
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-all"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-400">نعم، نوفر خدمة التحديثات البسيطة مقابل رسوم رمزية، أو يمكنك طلب لوحة تحكم خاصة بك.</p>
+                </details>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 border-t border-white/5 py-12 bg-dark">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500">© 2026 PROFILE PRO. جميع الحقوق محفوظة لخدمات السحاب المتطورة.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(p => p.classList.add('hidden'));
+            document.getElementById(pageId + 'Page').classList.remove('hidden');
+            document.getElementById('mobileMenu').classList.add('hidden');
+            window.scrollTo(0,0);
+        }
+
+        // تحديث منطق الأسعار ليكون متوافق مع مشروعك (10$-30$)
+        function calculatePrice() {
+            const basePrice = 15; // سعر التصميم الأساسي
+            const monthlyHosting = 2; // سعر الاستضافة الشهري
+            const period = parseInt(document.getElementById('hostingPeriod').value);
+            
+            let total = basePrice + (monthlyHosting * period);
+            
+            if(period === 6) total = total * 0.95; 
+            if(period === 12) total = total * 0.90;
+
+            document.getElementById('totalPrice').innerText = Math.round(total) + " $";
+        }
+
+        document.getElementById('menuBtn').onclick = function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        // تحسين الإرسال ليفتح واتساب مباشرة مع المعلومات
+        document.getElementById('orderForm').onsubmit = function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const details = document.getElementById('details').value;
+            const price = document.getElementById('totalPrice').innerText;
+            
+            const message = `مرحباً، أريد طلب مشروع بروفايل جديد:%0Aالاسم: ${name}%0Aالتفاصيل: ${details}%0Aالتكلفة التقديرية: ${price}`;
+            window.open(`https://wa.me/967717154139?text=${message}`, '_blank'); // استبدل الرقم برقمك
+        }
+
+        calculatePrice();
+    </script>
+</body>
+</html>
